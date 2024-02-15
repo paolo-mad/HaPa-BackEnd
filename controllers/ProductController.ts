@@ -1,6 +1,11 @@
 import {Request,Response} from 'express'
 import ProductModel from '../models/ProductModel'
 
+type RequestBodyType = {
+    product_name: string;
+    price: number;
+    stock_quantity: number;
+};
 
 
 const ProductController = {
@@ -28,14 +33,8 @@ const ProductController = {
         }
     },
     addProduct: async (req: Request, res: Response) => {
-        type RequestBodyType = {
-            product_name: string;
-            price: number;
-            stock_quantity: number;
-        };
-        
-        
-      const { product_name, price, stock_quantity } = req.body as RequestBodyType
+            
+      const { product_name, price, stock_quantity } = req.body ??{}
         if (!product_name || !price || !stock_quantity) {
             res.status(400).json({ message: 'Please provide product name, price and stock quantity' });
             return;
@@ -43,15 +42,9 @@ const ProductController = {
         await ProductModel.createProduct(product_name, price, stock_quantity);
 
     },
-    updateProduct: async (req: Request, res: Response) => {
-        type RequestBodyType = {
-            product_name: string;
-            price: number;
-            stock_quantity: number;
-        };
-        
+    updateProduct: async (req: Request, res: Response) => {    
         const id = req.params.id;
-        const { product_name, price, stock_quantity} = req.body as RequestBodyType
+        const { product_name, price, stock_quantity} = req.body ??{}
         if (!product_name || !price || !stock_quantity) {
             res.status(400).json({ message: 'Please provide product name, price and stock quantity' });
             return;
