@@ -6,7 +6,7 @@ const ProductModel = {
         return result;
     },
     getProduct: async (id: string) => {
-        const [result, metadata] = await connection.query(`SELECT * FROM products WHERE product_id = ${id}`);
+        const [result, metadata] = await connection.query(`SELECT * FROM products WHERE product_id = ?`, [id]);
         return result;
     },
     createProduct: async (product_name: string, price: string, stock_quantity: number, category_id: number) => {
@@ -14,11 +14,11 @@ const ProductModel = {
         return result;
     },
     updateProduct: async (id: string, product_name: string, price: number, stock_quantity: number, category_id: number) => {
-        const [result, metadata] = await connection.query(`UPDATE products SET product_name = '${product_name}', price = '${price}', stock_quantity = '${stock_quantity}', 'category_id = '${category_id}' WHERE product_id = ${id}`);
+        const [result, metadata] = await connection.query(`UPDATE products SET product_name = '${product_name}', price = '${price}', stock_quantity = '${stock_quantity}', 'category_id = '${category_id}' WHERE product_id = ?`,[id]);
         return result;
     },
     deleteProduct: async (id: string) => {
-        const [result, metadata] = await connection.query(`DELETE FROM products WHERE product_id = ${id}`);
+        const [result, metadata] = await connection.query(`DELETE FROM products WHERE product_id = ?`,[id]);
         return result;
     },
 
