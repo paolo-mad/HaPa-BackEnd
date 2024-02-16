@@ -10,26 +10,19 @@ const ProductModel = {
         return result;
     },
     createProduct: async (product_name: string, price: string, stock_quantity: number, category_id: number) => {
-        const [result] = await connection.query(`INSERT INTO products (product_name, price, stock_quantity, category_id) VALUES ('${product_name}', '${price}', '${stock_quantity}','${category_id}')`);
+        const query = 'INSERT INTO products (product_name, price, stock_quantity, category_id) VALUES (?, ?, ?, ?)';
+        const values = [product_name, price, stock_quantity, category_id];
+        const [result] = await connection.query(query, values);
         return result;
-    },
-    // updateProduct: async (id: string, product_name: string, price: number, stock_quantity: number, category_id: number) => {
-    //     const [result] = await connection.query(`UPDATE products SET product_name = '${product_name}', price = '${price}', stock_quantity = ${stock_quantity}, category_id = ${category_id} WHERE product_id = ?`,[id]);
-    //     return result;
-    // },
+      },
     updateProduct: async (id: string, product_name: string, price: number, stock_quantity: number, category_id: number) => {
         const [result] = await connection.query('UPDATE products SET product_name = ?, price = ?, stock_quantity = ?, category_id = ? WHERE product_id = ?', [product_name, price, stock_quantity, category_id, id]);
         return result;
-    },
-    
-
-
-
+    }, 
     deleteProduct: async (id: string) => {
         const [result] = await connection.query(`DELETE FROM products WHERE product_id = ?`,[id]);
         return result;
     },
-
 }
 
 export default ProductModel;
