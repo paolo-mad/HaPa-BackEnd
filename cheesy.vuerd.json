@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -447.4939594173509,
-    "scrollLeft": -243.52380850106786,
+    "scrollTop": -424.9106266635073,
+    "scrollLeft": -545.9960186643865,
     "zoomLevel": 0.75,
     "show": {
       "tableComment": true,
@@ -190,7 +190,7 @@
           "active": false,
           "left": 906.1642,
           "top": 532.991,
-          "zIndex": 13,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60,
           "color": "#FFEB3B"
@@ -250,7 +250,7 @@
           },
           {
             "id": "b8f5728a-4fb9-4e8b-9366-23070830762f",
-            "name": "level_pungeancy",
+            "name": "pungency_level",
             "comment": "",
             "dataType": "VARCHAR",
             "default": "",
@@ -265,7 +265,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 99.576171875,
+              "widthName": 92.34619140625,
               "widthComment": 60,
               "widthDataType": 64.60693359375,
               "widthDefault": 60
@@ -274,9 +274,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 980.1697,
-          "top": 890.8531,
-          "zIndex": 21,
+          "left": 892.1701,
+          "top": 817.52,
+          "zIndex": 36,
           "widthName": 66.30810546875,
           "widthComment": 60,
           "color": "#F44336"
@@ -452,9 +452,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 361.4637,
-          "top": 905.5586,
-          "zIndex": 4,
+          "left": 318.7969,
+          "top": 662.892,
+          "zIndex": 23,
           "widthName": 94.498046875,
           "widthComment": 60,
           "color": "#4CAF50"
@@ -584,9 +584,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 329.6789,
-          "top": 579.03,
-          "zIndex": 3,
+          "left": 317.6791,
+          "top": 432.3636,
+          "zIndex": 22,
           "widthName": 60,
           "widthComment": 60,
           "color": "#005DFF"
@@ -647,9 +647,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 370.8555,
-          "top": 366.6053,
-          "zIndex": 2,
+          "left": 317.5221,
+          "top": 283.9392,
+          "zIndex": 21,
           "widthName": 62.6962890625,
           "widthComment": 60,
           "color": "#FF8600"
@@ -691,8 +691,8 @@
           "columnIds": [
             "a7c50247-cda2-4fd0-b02f-97adff44ead9"
           ],
-          "x": 800.3513953125,
-          "y": 1011.8086,
+          "x": 757.6845953125,
+          "y": 769.142,
           "direction": "right"
         },
         "constraintName": "fk_products_to_user_purchases",
@@ -708,8 +708,8 @@
           "columnIds": [
             "00cb1979-7766-43d6-bcd8-b9979695dfcd"
           ],
-          "x": 547.313665625,
-          "y": 750.53,
+          "x": 535.3138656250001,
+          "y": 603.8636,
           "direction": "bottom"
         },
         "end": {
@@ -717,8 +717,8 @@
           "columnIds": [
             "2fd55c63-0fe5-47d7-9f28-6a93aee6d306"
           ],
-          "x": 580.90754765625,
-          "y": 905.5586,
+          "x": 538.24074765625,
+          "y": 662.892,
           "direction": "top"
         },
         "constraintName": "fk_users_to_user_purchases",
@@ -734,8 +734,8 @@
           "columnIds": [
             "21d2c0fe-bcf1-49b2-9383-4d537a09291b"
           ],
-          "x": 1214.435325,
-          "y": 890.8531,
+          "x": 1122.820734765625,
+          "y": 817.52,
           "direction": "top"
         },
         "end": {
@@ -760,8 +760,8 @@
           "columnIds": [
             "22b6f59d-1b42-4873-bd77-a1a73f749127"
           ],
-          "x": 588.490265625,
-          "y": 476.6053,
+          "x": 535.156865625,
+          "y": 393.9392,
           "direction": "bottom"
         },
         "end": {
@@ -769,8 +769,8 @@
           "columnIds": [
             "9d1b10a4-4472-4501-b8e5-34547978d788"
           ],
-          "x": 547.313665625,
-          "y": 579.03,
+          "x": 535.3138656250001,
+          "y": 432.3636,
           "direction": "top"
         },
         "constraintName": "fk_user_roles_to_users",
